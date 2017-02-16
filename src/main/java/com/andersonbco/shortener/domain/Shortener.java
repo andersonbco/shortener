@@ -29,4 +29,9 @@ public class Shortener {
     
     @OneToMany(mappedBy="shortener", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Statistics> statistics;
+    
+    public Shortener(String URL, String alias) {
+        this.url = URL;
+        this.alias = alias;
+    }
 }
