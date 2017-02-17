@@ -1,9 +1,12 @@
 package com.andersonbco.shortener.services;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.andersonbco.shortener.domain.Shortener;
+import com.andersonbco.shortener.domain.Statistics;
 import com.andersonbco.shortener.repository.ShortenerRepository;
 import com.andersonbco.shortener.repository.StatisticsRepository;
 
@@ -18,8 +21,19 @@ public class ShortenerService {
     
     public Shortener create(String URL, String alias) {
         
-        Shortener shortener = new Shortener(URL, alias);
+        Statistics statistics = new Statistics(LocalDateTime.now());
         
-        return shortenerRepository.save(shortener);
+        statisticsRepository.save(statistics);
+        
+        Shortener shortener = new Shortener(URL, alias, statistics);
+        
+        shortenerRepository.save(shortener);
+        
+        return shortener;
+    }
+    
+    public Shortener findByAliasIgnoreCase(String alias) {
+        
+        return shortenerRepository.findByAliasIgnoreCase(alias);
     }
 }
