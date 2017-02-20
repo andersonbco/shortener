@@ -1,13 +1,12 @@
 package com.andersonbco.shortener.domain;
 
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -27,11 +26,49 @@ public class Shortener {
         
     private String alias;
     
-    @OneToMany(mappedBy="shortener", cascade = CascadeType.REMOVE, orphanRemoval = true)
-    private List<Statistics> statistics;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "STATISTICS_ID")
+    private Statistics statistics;
     
-    public Shortener(String URL, String alias) {
+    public Shortener() {
+        
+    }
+    
+    public Shortener(String URL, String alias, Statistics statistics) {
         this.url = URL;
         this.alias = alias;
+        this.statistics = statistics;
     }
+    
+    public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+	
+	public Statistics getStatistics() {
+	    return statistics;
+	}
+	
+	public void setStatistics(Statistics statistics) {
+	    this.statistics = statistics;
+	}
 }

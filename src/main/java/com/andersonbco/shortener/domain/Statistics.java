@@ -1,14 +1,9 @@
 package com.andersonbco.shortener.domain;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -19,15 +14,45 @@ public class Statistics {
     
     @Id
 	@GeneratedValue(generator = "system-uuid")
-	@GenericGenerator(name="system-uuid", strategy = "uuid")
-	@Column(columnDefinition = "BINARY(16)")
+	@GenericGenerator(name = "system-uuid", strategy = "uuid")
+	@Column(name = "STATISTICS_ID", columnDefinition = "BINARY(16)")
 	@JsonIgnore
     private String id;
     
-    private LocalDateTime timeTaken;
+    private String timeTaken;
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "SHORTENER_ID")
-    @JsonIgnore
-    private Shortener shortener;
+    private Integer accessCount;
+    
+    public Statistics() {
+        
+    }
+    
+    public Statistics(String timeTaken, Integer accessCount) {
+        this.timeTaken = timeTaken;
+        this.accessCount = accessCount;
+    }
+    
+    public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getTimeTaken() {
+	    return timeTaken;
+	}
+	
+	public void setTimeTaken(String timeTaken) {
+	    this.timeTaken = timeTaken;
+	}
+
+	public Integer getAccessCount() {
+		return accessCount;
+	}
+
+	public void setAccessCount(Integer accessCount) {
+		this.accessCount = accessCount;
+	}
 }
