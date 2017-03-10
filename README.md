@@ -1,4 +1,7 @@
 # Hire.me
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f2516dd2b8842948b24482b4c1a1f67)](https://www.codacy.com/app/andersonbco/shortener?utm_source=github.com&utm_medium=referral&utm_content=andersonbco/shortener&utm_campaign=badger)
+
 Um pequeno projeto para testar suas habilidades como programador.
 
 ## Instruções Gerais
