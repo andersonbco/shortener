@@ -1,3 +1,6 @@
 language: java
 
-script: mvnw test -B
+jdk: 
+  - oraclejdk8
+
+script: mvn test -B
