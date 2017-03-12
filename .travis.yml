@@ -6,7 +6,7 @@ jdk:
   - oraclejdk8
 
 before_install:
-- curl -sL http://bit.ly/jpm4j >jpm4j.jar
+- curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
 - sudo java -jar jpm4j.jar -g init
 - sudo jpm install com.codacy:codacy-coverage-reporter:assembly
 
