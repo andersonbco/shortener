@@ -18,7 +18,7 @@ public class ResourceExceptionHandler {
 	public ResponseEntity<ErrorMessage> handleCustomAliasExistsException(CustomAliasExistsException e, HttpServletRequest request) {
 		
 		ErrorMessage message = new ErrorMessage();
-		message.setErr_code("001");
+		message.setErrCode("001");
 		message.setDescription("CUSTOM ALIAS ALREADY EXISTS");
 		
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
@@ -28,7 +28,7 @@ public class ResourceExceptionHandler {
 	public ResponseEntity<ErrorMessage> handleShortenedUrlNotFoundException(ShortenedUrlNotFoundException e, HttpServletRequest request) {
 		
 		ErrorMessage message = new ErrorMessage();
-		message.setErr_code("002");
+		message.setErrCode("002");
 		message.setDescription("SHORTENED URL NOT FOUND");
 		
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);

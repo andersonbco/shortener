@@ -21,7 +21,7 @@ import com.andersonbco.shortener.services.ShortenerService;
 public class ShortenerResources {
     
     @Autowired
-    ShortenerService shortenerService;
+    private ShortenerService shortenerService;
     
     @RequestMapping(value    = "/create", 
                     produces = MediaType.APPLICATION_JSON_VALUE,

@@ -13,7 +13,7 @@ public class ErrorMessage {
 		return errCode;
 	}
 
-	public void setErr_code(String errCode) {
+	public void setErrCode(String errCode) {
 		this.errCode = errCode;
 	}
 
