@@ -16,4 +16,4 @@ install:
 script: mvn test
 
 after_success:
-- ~/jpm/bin/codacy-coverage-reporter -l Java -r coverages.xml
+- ~/jpm/bin/codacy-coverage-reporter -l Java -r coverage.xml
