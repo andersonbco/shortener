@@ -1,17 +1,20 @@
 package com.andersonbco.shortener.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ErrorMessage {
 
-	private String err_code;
+	@JsonProperty(value = "err_code")
+	private String errCode;
 	
 	private String description;
 
-	public String getErr_code() {
-		return err_code;
+	public String getErrCode() {
+		return errCode;
 	}
 
-	public void setErr_code(String err_code) {
-		this.err_code = err_code;
+	public void setErr_code(String errCode) {
+		this.errCode = errCode;
 	}
 
 	public String getDescription() {
