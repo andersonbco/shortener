@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,7 +52,7 @@ public class ShortenerApplicationTests {
 	}
 	
 	@Test
-	public void get_all_success() throws Exception {
+	public void getTopTenSuccess() throws Exception {
 		
 		List<Shortener> shorteners = Arrays.asList( new Shortener("http://www.bemobi.com", "BEMOBI", new Statistics()),
 													new Shortener("https://www.google.com.br", "GOOGLE", new Statistics()));
@@ -65,5 +66,7 @@ public class ShortenerApplicationTests {
 		
 		Mockito.verify(shortenerService, Mockito.times(1)).listTopTen();
 		Mockito.verifyNoMoreInteractions(shortenerService);
+		
+		Assert.assertNotNull(mockMvc);
 	}
 }
