@@ -12,19 +12,18 @@ import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- * Domain class for the Shortener
+/** Domain class for the Shortener.
  * @author andersoncorrea
  */
 @Entity
 public class Shortener {
     
-	/**
-	 * id
-	 */
+    /**
+     * id
+     */
     @Id
     @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name ="system-uuid", strategy = "uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(columnDefinition = "BINARY(16)")
     @JsonIgnore
     private String id;
