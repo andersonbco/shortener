@@ -17,4 +17,4 @@ script: mvn clean test
 
 after_success:
   - mvn jacoco:report
-  - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml --prefix src/main/java/
+  - ~/jpm/bin/codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml
