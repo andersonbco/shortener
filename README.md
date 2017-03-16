@@ -1,6 +1,9 @@
 [![Build Status](https://travis-ci.org/andersonbco/shortener.svg?branch=master)](https://travis-ci.org/andersonbco/shortener)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f2516dd2b8842948b24482b4c1a1f67)](https://www.codacy.com/app/andersonbco/shortener?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=andersonbco/shortener&amp;utm_campaign=Badge_Grade)[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/8f2516dd2b8842948b24482b4c1a1f67)](https://www.codacy.com/app/andersonbco/shortener?utm_source=github.com&utm_medium=referral&utm_content=andersonbco/shortener&utm_campaign=Badge_Coverage)
 
 # Hire.me
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f2516dd2b8842948b24482b4c1a1f67)](https://www.codacy.com/app/andersonbco/shortener?utm_source=github.com&utm_medium=referral&utm_content=andersonbco/shortener&utm_campaign=badger)
+
 Um pequeno projeto para testar suas habilidades como programador.
 
 ## Instruções Gerais
